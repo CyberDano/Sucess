@@ -16,22 +16,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" image="wallpaper" translatesAutoresizingMaskIntoConstraints="NO" id="se8-as-90f">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="wallpaper" translatesAutoresizingMaskIntoConstraints="NO" id="se8-as-90f">
                                 <rect key="frame" x="-367" y="0.0" width="1126" height="852"/>
-                                <autoresizingMask key="autoresizingMask"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Sucess!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="dxf-et-nKE">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Sucess!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="dxf-et-nKE">
                                 <rect key="frame" x="76" y="71" width="240" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="50"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dg4-fQ-ylL">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dg4-fQ-ylL">
                                 <rect key="frame" x="156" y="335" width="86" height="38"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemPurpleColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Play &gt;" cornerStyle="medium">
@@ -42,14 +39,14 @@
                                     <segue destination="sCD-hv-Kuf" kind="presentation" modalPresentationStyle="fullScreen" id="ZuM-GM-vTB"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qb5-BK-eGM">
-                                <rect key="frame" x="140" y="480" width="112" height="38"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qb5-BK-eGM">
+                                <rect key="frame" x="140" y="558" width="112" height="54"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Scores &gt;" cornerStyle="medium">
+                                <buttonConfiguration key="configuration" style="plain" title="Scores &gt;" subtitle="Your vest: 0" cornerStyle="medium">
                                     <fontDescription key="titleFontDescription" type="system" weight="black" pointSize="20"/>
+                                    <fontDescription key="subtitleFontDescription" type="system" weight="semibold" pointSize="12"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <segue destination="tOp-HX-B5E" kind="presentation" id="qpP-YJ-R17"/>
@@ -58,16 +55,32 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dg4-fQ-ylL" secondAttribute="trailing" constant="151" id="AUI-iP-h4d"/>
+                            <constraint firstItem="dxf-et-nKE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="76" id="FCE-r2-GtD"/>
+                            <constraint firstItem="dxf-et-nKE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="MSy-Ok-Rid"/>
+                            <constraint firstItem="se8-as-90f" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-59" id="b3s-Uu-5hM"/>
+                            <constraint firstItem="dg4-fQ-ylL" firstAttribute="top" secondItem="dxf-et-nKE" secondAttribute="bottom" constant="184" id="gzG-97-Tqf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="se8-as-90f" secondAttribute="trailing" constant="-382" id="iIa-xR-V77"/>
+                            <constraint firstItem="Qb5-BK-eGM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="140" id="ijp-8K-hWM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Qb5-BK-eGM" secondAttribute="trailing" constant="141" id="jEa-IS-xgh"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="se8-as-90f" secondAttribute="bottom" constant="-34" id="oUB-AP-reM"/>
+                            <constraint firstItem="se8-as-90f" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-383" id="qsJ-oR-WJY"/>
+                            <constraint firstItem="Qb5-BK-eGM" firstAttribute="top" secondItem="dg4-fQ-ylL" secondAttribute="bottom" constant="185" id="sDY-c9-qcG"/>
+                            <constraint firstItem="dg4-fQ-ylL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="156" id="tBS-mi-XgE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dxf-et-nKE" secondAttribute="trailing" constant="77" id="uUM-GK-MWu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Qb5-BK-eGM" secondAttribute="bottom" constant="206" id="yuN-wV-Vs3"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="54.198473282442748" y="-34.507042253521128"/>
         </scene>
-        <!--View Controller-->
+        <!--GameViewController-->
         <scene sceneID="DL9-NI-Jot">
             <objects>
-                <viewController id="sCD-hv-Kuf" sceneMemberID="viewController">
+                <viewController title="GameViewController" id="sCD-hv-Kuf" customClass="GameViewController" customModule="SucessApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8Bg-oW-Lxl">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -76,19 +89,35 @@
                                 <rect key="frame" x="-612" y="0.0" width="1126" height="852"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Stitch_normal" translatesAutoresizingMaskIntoConstraints="NO" id="Csa-QV-RFh">
+                                <rect key="frame" x="35" y="519" width="130" height="130"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Score: 0" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v4j-OZ-CQw">
+                                <rect key="frame" x="16" y="68" width="361" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="TEy-ja-7OZ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="ImageSwitch" destination="Csa-QV-RFh" id="Dnx-HA-5p5"/>
+                        <outlet property="TextInfo" destination="v4j-OZ-CQw" id="MvT-0J-dja"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Ek-H2-B7A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="980.91603053435108" y="-35.211267605633807"/>
         </scene>
-        <!--View Controller-->
+        <!--ScoreViewController-->
         <scene sceneID="eCk-ya-7Fn">
             <objects>
-                <viewController id="tOp-HX-B5E" sceneMemberID="viewController">
+                <viewController title="ScoreViewController" id="tOp-HX-B5E" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ie9-ki-Emo">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -108,6 +137,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Stitch_normal" width="500" height="500"/>
         <image name="wallpaper" width="626" height="501"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

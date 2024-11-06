@@ -1,10 +1,3 @@
-//
-//  ViewController.swift
-//  SucessApp
-//
-//  Created by Alumnos on 6/11/24.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
