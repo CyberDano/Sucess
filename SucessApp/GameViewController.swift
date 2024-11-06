@@ -13,14 +13,7 @@ class GameViewController: UIViewController {
         UIImage(named: "Pink_brown")!
     ]
     // Botones de elección
-    @IBOutlet weak var Option1: UIButton!
-    @IBOutlet weak var Option2: UIButton!
-    @IBOutlet weak var Option3: UIButton!
-    @IBOutlet weak var Option4: UIButton!
-    @IBOutlet weak var Option5: UIButton!
-    @IBOutlet weak var Option6: UIButton!
-    @IBOutlet weak var Option7: UIButton!
-    @IBOutlet weak var Option8: UIButton!
+    @IBOutlet var Options: [UIButton]?
     // Componentes del juego
     @IBOutlet weak var ImageSwitch: UIImageView!
     @IBOutlet weak var TextInfo: UITextView!
@@ -37,9 +30,12 @@ class GameViewController: UIViewController {
         started = startedGame()
         ShowHUD(state: false)
     }
+    /// Muestra información en pantalla
     private func ShowHUD(state: Bool) {
-        PlayButton.isHidden = state
-        PlayButton.isEnabled = !state
+        PlayButton.isHidden = !state
+        for n in Options! {
+            n.isHidden = !state
+        }
     }
     /// Actualiza el el registro de imagen
     private func ChangeImage() -> Int {
@@ -51,9 +47,12 @@ class GameViewController: UIViewController {
             has = recient.contains(tempInt)
         }
         recient.append(tempInt)
-        if recient.count == 3 {
+        if recient.count > 2 {
             timer?.invalidate()
+            print(recient)
+            TextInfo.text = "Choose the sequence:"
             ShowHUD(state: true)
+            //ImageSwitch.isHidden = true
         }
         return tempInt
     }

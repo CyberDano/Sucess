@@ -102,17 +102,17 @@
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pwl-rx-Tgk">
-                                <rect key="frame" x="163" y="658" width="76" height="38"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pwl-rx-Tgk">
+                                <rect key="frame" x="157" y="658" width="88" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemPurpleColor"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Start">
+                                <buttonConfiguration key="configuration" style="plain" title="Check">
                                     <fontDescription key="titleFontDescription" type="system" weight="black" pointSize="20"/>
                                 </buttonConfiguration>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="buz-Qa-H1j" userLabel="Button1">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="buz-Qa-H1j" userLabel="Button1">
                                 <rect key="frame" x="68" y="239" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <color key="backgroundColor" red="1" green="0.36691450116442326" blue="0.93758029601021831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -122,7 +122,7 @@
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="x5J-YG-FLk" userLabel="Button2">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="x5J-YG-FLk" userLabel="Button2">
                                 <rect key="frame" x="126" y="239" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <color key="backgroundColor" red="1" green="0.36691450116442326" blue="0.93758029601021831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -132,7 +132,7 @@
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="ibd-o7-6Ia" userLabel="Button3">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="ibd-o7-6Ia" userLabel="Button3">
                                 <rect key="frame" x="68" y="291" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <color key="backgroundColor" red="1" green="0.36691450116442326" blue="0.93758029601021831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -142,7 +142,7 @@
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="XQj-x4-BL3" userLabel="Button4">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="XQj-x4-BL3" userLabel="Button4">
                                 <rect key="frame" x="126" y="291" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <color key="backgroundColor" red="1" green="0.36691450116442326" blue="0.93758029601021831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -152,7 +152,7 @@
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="4BV-sk-4CK" userLabel="Button5">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="4BV-sk-4CK" userLabel="Button5">
                                 <rect key="frame" x="214" y="239" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <color key="backgroundColor" name="AccentColor"/>
@@ -162,7 +162,7 @@
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="zJG-IQ-e5q" userLabel="Button6">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="zJG-IQ-e5q" userLabel="Button6">
                                 <rect key="frame" x="272" y="239" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <color key="backgroundColor" name="AccentColor"/>
@@ -172,7 +172,7 @@
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="mCA-6h-YdS" userLabel="Button7">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="mCA-6h-YdS" userLabel="Button7">
                                 <rect key="frame" x="214" y="291" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <color key="backgroundColor" name="AccentColor"/>
@@ -182,7 +182,7 @@
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="tDz-TB-BJz" userLabel="Button8">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="tDz-TB-BJz" userLabel="Button8">
                                 <rect key="frame" x="272" y="291" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <color key="backgroundColor" name="AccentColor"/>
@@ -198,16 +198,16 @@
                     </view>
                     <connections>
                         <outlet property="ImageSwitch" destination="Csa-QV-RFh" id="Dnx-HA-5p5"/>
-                        <outlet property="Option1" destination="buz-Qa-H1j" id="icZ-zk-9vy"/>
-                        <outlet property="Option2" destination="x5J-YG-FLk" id="NK9-t3-qSP"/>
-                        <outlet property="Option3" destination="ibd-o7-6Ia" id="hRS-Fx-ifZ"/>
-                        <outlet property="Option4" destination="XQj-x4-BL3" id="jgW-XQ-WpY"/>
-                        <outlet property="Option5" destination="4BV-sk-4CK" id="ZPc-6H-YoW"/>
-                        <outlet property="Option6" destination="zJG-IQ-e5q" id="9Kk-VB-een"/>
-                        <outlet property="Option7" destination="mCA-6h-YdS" id="nXn-Jw-cvc"/>
-                        <outlet property="Option8" destination="tDz-TB-BJz" id="7eH-jT-ayJ"/>
                         <outlet property="PlayButton" destination="Pwl-rx-Tgk" id="gDZ-jG-2KL"/>
                         <outlet property="TextInfo" destination="v4j-OZ-CQw" id="MvT-0J-dja"/>
+                        <outletCollection property="Options" destination="buz-Qa-H1j" collectionClass="NSMutableArray" id="ZsW-E2-Auj"/>
+                        <outletCollection property="Options" destination="x5J-YG-FLk" collectionClass="NSMutableArray" id="y7I-Uq-Qy3"/>
+                        <outletCollection property="Options" destination="ibd-o7-6Ia" collectionClass="NSMutableArray" id="Lbq-fy-7WV"/>
+                        <outletCollection property="Options" destination="XQj-x4-BL3" collectionClass="NSMutableArray" id="cf9-H2-Y2L"/>
+                        <outletCollection property="Options" destination="4BV-sk-4CK" collectionClass="NSMutableArray" id="Py9-rE-gV2"/>
+                        <outletCollection property="Options" destination="zJG-IQ-e5q" collectionClass="NSMutableArray" id="x5L-2P-x8b"/>
+                        <outletCollection property="Options" destination="mCA-6h-YdS" collectionClass="NSMutableArray" id="qSa-Bl-nKa"/>
+                        <outletCollection property="Options" destination="tDz-TB-BJz" collectionClass="NSMutableArray" id="pFs-Wq-FJm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Ek-H2-B7A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
