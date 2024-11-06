@@ -12,24 +12,34 @@ class GameViewController: UIViewController {
         UIImage(named: "Pink_light")!,
         UIImage(named: "Pink_brown")!
     ]
+    // Botones de elección
+    @IBOutlet weak var Option1: UIButton!
+    @IBOutlet weak var Option2: UIButton!
+    @IBOutlet weak var Option3: UIButton!
+    @IBOutlet weak var Option4: UIButton!
+    @IBOutlet weak var Option5: UIButton!
+    @IBOutlet weak var Option6: UIButton!
+    @IBOutlet weak var Option7: UIButton!
+    @IBOutlet weak var Option8: UIButton!
+    // Componentes del juego
     @IBOutlet weak var ImageSwitch: UIImageView!
     @IBOutlet weak var TextInfo: UITextView!
-    
+    @IBOutlet weak var PlayButton: UIButton!
     var points: Int = 0 // Contador de puntos
     var Index: Int = -1 // Int para seleccionar un UIImage
     var timer: Timer? // Timer
     var started: Bool = false
-    var recient: [Int] = [] // Registro de Int usados
+    var recient: [Int] = [] // Registro para el orden
+    var options: [Int] = [] // Orden especificado por el jugador
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        while !started {
-            started = startedGame()
-            TextInfo.text = "Starting..."
-            if started {
-                TextInfo.text = "Started!"
-            }
-        }
+        started = startedGame()
+        ShowHUD(state: false)
+    }
+    private func ShowHUD(state: Bool) {
+        PlayButton.isHidden = state
+        PlayButton.isEnabled = !state
     }
     /// Actualiza el el registro de imagen
     private func ChangeImage() -> Int {
@@ -41,6 +51,10 @@ class GameViewController: UIViewController {
             has = recient.contains(tempInt)
         }
         recient.append(tempInt)
+        if recient.count == 3 {
+            timer?.invalidate()
+            ShowHUD(state: true)
+        }
         return tempInt
     }
     /// Secuencia de imagenes
@@ -48,13 +62,13 @@ class GameViewController: UIViewController {
         // Iniciar el timer
         timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: active) { [weak self] _ in
             guard let self = self else { return }
+            TextInfo.text = "Remember the sequence!"
             self.Index = ChangeImage()
             // Actualizar la imagen en el UIImageView
             self.ImageSwitch.image = self.images[self.Index]
         }
     }
     private func startedGame() -> Bool {
-        TextInfo.text = "\(0)"
         GamePlay(active: true)
         recient = []
         return true
