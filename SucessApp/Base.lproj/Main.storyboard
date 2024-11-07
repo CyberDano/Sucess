@@ -111,8 +111,11 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Check">
                                     <fontDescription key="titleFontDescription" type="system" weight="black" pointSize="20"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="CheckResult:" destination="sCD-hv-Kuf" eventType="touchUpInside" id="sVv-e7-g9f"/>
+                                </connections>
                             </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="buz-Qa-H1j" userLabel="Button1">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="0" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="buz-Qa-H1j" userLabel="Button1">
                                 <rect key="frame" x="68" y="239" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <color key="backgroundColor" red="1" green="0.36691450116442326" blue="0.93758029601021831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -121,8 +124,11 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="small"/>
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="ChoosedOption:" destination="sCD-hv-Kuf" eventType="touchUpInside" id="vpj-2c-itE"/>
+                                </connections>
                             </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="x5J-YG-FLk" userLabel="Button2">
+                            <button hidden="YES" opaque="NO" tag="1" contentMode="scaleToFill" restorationIdentifier="1" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="x5J-YG-FLk" userLabel="Button2">
                                 <rect key="frame" x="126" y="239" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <color key="backgroundColor" red="1" green="0.36691450116442326" blue="0.93758029601021831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -131,8 +137,11 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="small"/>
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="ChoosedOption:" destination="sCD-hv-Kuf" eventType="touchUpInside" id="2Ft-5T-fE9"/>
+                                </connections>
                             </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="ibd-o7-6Ia" userLabel="Button3">
+                            <button hidden="YES" opaque="NO" tag="2" contentMode="scaleToFill" restorationIdentifier="2" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="ibd-o7-6Ia" userLabel="Button3">
                                 <rect key="frame" x="68" y="291" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <color key="backgroundColor" red="1" green="0.36691450116442326" blue="0.93758029601021831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -141,8 +150,11 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="small"/>
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="ChoosedOption:" destination="sCD-hv-Kuf" eventType="touchUpInside" id="fqR-E3-Tb9"/>
+                                </connections>
                             </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="XQj-x4-BL3" userLabel="Button4">
+                            <button hidden="YES" opaque="NO" tag="3" contentMode="scaleToFill" restorationIdentifier="3" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="XQj-x4-BL3" userLabel="Button4">
                                 <rect key="frame" x="126" y="291" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <color key="backgroundColor" red="1" green="0.36691450116442326" blue="0.93758029601021831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -151,8 +163,11 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="small"/>
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="ChoosedOption:" destination="sCD-hv-Kuf" eventType="touchUpInside" id="8c1-Vx-UFC"/>
+                                </connections>
                             </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="4BV-sk-4CK" userLabel="Button5">
+                            <button hidden="YES" opaque="NO" tag="4" contentMode="scaleToFill" restorationIdentifier="4" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="4BV-sk-4CK" userLabel="Button5">
                                 <rect key="frame" x="214" y="239" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <color key="backgroundColor" name="AccentColor"/>
@@ -161,8 +176,11 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="small"/>
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="ChoosedOption:" destination="sCD-hv-Kuf" eventType="touchUpInside" id="je8-QM-TPi"/>
+                                </connections>
                             </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="zJG-IQ-e5q" userLabel="Button6">
+                            <button hidden="YES" opaque="NO" tag="5" contentMode="scaleToFill" restorationIdentifier="5" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="zJG-IQ-e5q" userLabel="Button6">
                                 <rect key="frame" x="272" y="239" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <color key="backgroundColor" name="AccentColor"/>
@@ -171,8 +189,11 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="small"/>
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="ChoosedOption:" destination="sCD-hv-Kuf" eventType="touchUpInside" id="ZOS-iY-cPe"/>
+                                </connections>
                             </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="mCA-6h-YdS" userLabel="Button7">
+                            <button hidden="YES" opaque="NO" tag="6" contentMode="scaleToFill" restorationIdentifier="6" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="mCA-6h-YdS" userLabel="Button7">
                                 <rect key="frame" x="214" y="291" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <color key="backgroundColor" name="AccentColor"/>
@@ -181,8 +202,11 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="small"/>
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="ChoosedOption:" destination="sCD-hv-Kuf" eventType="touchUpInside" id="kQm-JS-CfO"/>
+                                </connections>
                             </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="tDz-TB-BJz" userLabel="Button8">
+                            <button hidden="YES" opaque="NO" tag="7" contentMode="scaleToFill" restorationIdentifier="7" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="tDz-TB-BJz" userLabel="Button8">
                                 <rect key="frame" x="272" y="291" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <color key="backgroundColor" name="AccentColor"/>
@@ -191,14 +215,17 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="small"/>
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="ChoosedOption:" destination="sCD-hv-Kuf" eventType="touchUpInside" id="WVN-cD-xIT"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="TEy-ja-7OZ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
+                        <outlet property="ChooseButton" destination="Pwl-rx-Tgk" id="gDZ-jG-2KL"/>
                         <outlet property="ImageSwitch" destination="Csa-QV-RFh" id="Dnx-HA-5p5"/>
-                        <outlet property="PlayButton" destination="Pwl-rx-Tgk" id="gDZ-jG-2KL"/>
                         <outlet property="TextInfo" destination="v4j-OZ-CQw" id="MvT-0J-dja"/>
                         <outletCollection property="Options" destination="buz-Qa-H1j" collectionClass="NSMutableArray" id="ZsW-E2-Auj"/>
                         <outletCollection property="Options" destination="x5J-YG-FLk" collectionClass="NSMutableArray" id="y7I-Uq-Qy3"/>
