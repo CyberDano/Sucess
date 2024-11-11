@@ -1,7 +1,7 @@
 import UIKit
 
 class GameViewController: UIViewController {
-    
+    let Score = UserDefaults()
     var images: [UIImage] = [
         UIImage(named: "Stitch_normal")!,
         UIImage(named: "Stitch_dark")!,
@@ -13,6 +13,7 @@ class GameViewController: UIViewController {
         UIImage(named: "Pink_brown")!
     ]
     // Botones de elección
+    @IBOutlet weak var ClearList: UIButton!
     @IBOutlet var Options: [UIButton]?
     // Componentes del juego
     @IBOutlet weak var ImageSwitch: UIImageView!
@@ -27,12 +28,13 @@ class GameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        started = startedGame()
+        startedGame()
         ShowHUD(state: false)
     }
     /// Muestra información en pantalla
     private func ShowHUD(state: Bool) {
         ChooseButton.isHidden = !state
+        ClearList.isHidden = !state
         for n in Options! {
             n.isHidden = !state
         }
@@ -43,10 +45,10 @@ class GameViewController: UIViewController {
         var has: Bool = true // recient contiene el Int
         while has {
             tempInt = Int.random(in: 0...7)
-            print("valor random: \(tempInt)")
             has = recient.contains(tempInt)
+            print("valor random: \(tempInt)")
         }
-        if recient.count > 2 {
+        if recient.count == 3 {
             timer?.invalidate()
             choosing()
         } else {
@@ -64,7 +66,7 @@ class GameViewController: UIViewController {
     /// Secuencia de imagenes
     private func GamePlay() {
         // Iniciar el timer
-        timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { [weak self] _ in
+        timer = Timer.scheduledTimer(withTimeInterval: 0.7, repeats: true) { [weak self] _ in
             guard let self = self else { return }
             TextInfo.text = "Remember the sequence!"
             self.Index = ChangeImage()
@@ -74,31 +76,48 @@ class GameViewController: UIViewController {
     }
     /// Seleccionar el orden de la sucesión (jugador)
     @IBAction func ChoosedOption(_ sender: UIButton) {
-        print(options)
+        for n in Options! {
+            n.isSelected = false
+            n.backgroundColor = .gray
+        }
         print("Entras en la selección")
-        sender.isSelected = !sender.isSelected
+        if sender.tag == 8 {
+            do {
+                options.removeAll()
+                for n in Options! {
+                    n.isSelected = false
+                    n.backgroundColor = .gray
+                }
+            } catch {
+              print("list is empty")
+            }
+        }
         if !sender.isSelected {
             print("Botón pulsado: \(sender.tag)")
-            options.append(sender.tag)
+            if options.count <= 3 {options.append(sender.tag)}
             sender.backgroundColor = .green
         }
-        else {
-            sender.backgroundColor = .gray
-        }
+        print(options)
     }
-    
+    /// Comprueba si las secuencias coinciden o no
+    /// Permite segiuir jugando o guarda el récord
     @IBAction func CheckResult(_ sender: Any) {
         if recient == options {
             points += 1
-            var st: Bool = startedGame()
+            startedGame()
         } else {
             TextInfo.text = "Oh no. You lose :(\nScore: \(points)"
+            let score = Score.integer(forKey: "points")
+            if points > score {
+                Score.setValue(points, forKey: "points")
+            }
+            ChooseButton.isHidden = true
         }
     }
-    private func startedGame() -> Bool {
+    private func startedGame() {
+        ImageSwitch.isHidden = false
         GamePlay()
         recient = []
         options = []
-        return true
     }
 }

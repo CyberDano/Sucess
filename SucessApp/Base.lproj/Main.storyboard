@@ -18,10 +18,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="wallpaper" translatesAutoresizingMaskIntoConstraints="NO" id="se8-as-90f">
-                                <rect key="frame" x="-367" y="0.0" width="1126" height="852"/>
+                                <rect key="frame" x="-367" y="-59" width="1126" height="945"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Sucess!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="dxf-et-nKE">
-                                <rect key="frame" x="76" y="71" width="240" height="80"/>
+                                <rect key="frame" x="76" y="12" width="240" height="172.33333333333334"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
@@ -29,7 +29,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dg4-fQ-ylL">
-                                <rect key="frame" x="156" y="335" width="86" height="38"/>
+                                <rect key="frame" x="156" y="368.33333333333331" width="86" height="38"/>
                                 <color key="backgroundColor" systemColor="systemPurpleColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Play &gt;" cornerStyle="medium">
@@ -41,13 +41,12 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qb5-BK-eGM">
-                                <rect key="frame" x="140" y="558" width="112" height="54"/>
+                                <rect key="frame" x="140" y="591.33333333333337" width="112" height="54.666666666666629"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Scores &gt;" subtitle="Your vest: 0" cornerStyle="medium">
+                                <buttonConfiguration key="configuration" style="plain" title="Scores &gt;" subtitle="Your best:" cornerStyle="medium">
                                     <fontDescription key="titleFontDescription" type="system" weight="black" pointSize="20"/>
-                                    <fontDescription key="subtitleFontDescription" type="system" weight="semibold" pointSize="12"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <segue destination="tOp-HX-B5E" kind="presentation" id="qpP-YJ-R17"/>
@@ -73,6 +72,9 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Qb5-BK-eGM" secondAttribute="bottom" constant="206" id="yuN-wV-Vs3"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="ScoreButton" destination="Qb5-BK-eGM" id="Oza-8T-1Cu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -95,7 +97,7 @@
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v4j-OZ-CQw">
-                                <rect key="frame" x="16" y="68" width="361" height="41"/>
+                                <rect key="frame" x="16" y="68" width="361" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" systemColor="labelColor"/>
@@ -219,12 +221,50 @@
                                     <action selector="ChoosedOption:" destination="sCD-hv-Kuf" eventType="touchUpInside" id="WVN-cD-xIT"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6iT-sN-qq2">
+                                <rect key="frame" x="16" y="724" width="101" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="&lt; Home">
+                                    <fontDescription key="titleFontDescription" type="system" weight="black" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="lHv-gS-WVf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e3l-rL-JJg">
+                                <rect key="frame" x="267" y="724" width="112" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Scores &gt;">
+                                    <fontDescription key="titleFontDescription" type="system" weight="black" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="tOp-HX-B5E" kind="presentation" id="Fwv-Dd-QH9"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" tag="8" contentMode="scaleToFill" restorationIdentifier="8" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="ljw-uR-ApK">
+                                <rect key="frame" x="163" y="358" width="67" height="28"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Clear">
+                                    <fontDescription key="titleFontDescription" type="system" weight="black" pointSize="14"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="ChoosedOption:" destination="sCD-hv-Kuf" eventType="touchUpInside" id="ybl-0g-izP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="TEy-ja-7OZ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
                         <outlet property="ChooseButton" destination="Pwl-rx-Tgk" id="gDZ-jG-2KL"/>
+                        <outlet property="ClearList" destination="ljw-uR-ApK" id="6Lw-ph-viT"/>
                         <outlet property="ImageSwitch" destination="Csa-QV-RFh" id="Dnx-HA-5p5"/>
                         <outlet property="TextInfo" destination="v4j-OZ-CQw" id="MvT-0J-dja"/>
                         <outletCollection property="Options" destination="buz-Qa-H1j" collectionClass="NSMutableArray" id="ZsW-E2-Auj"/>
@@ -263,6 +303,9 @@
             <point key="canvasLocation" x="1937" y="-35"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="qpP-YJ-R17"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="small_Pink_brown" width="50" height="50"/>
         <image name="small_Pink_dark" width="50" height="50"/>
