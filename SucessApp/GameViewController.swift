@@ -107,6 +107,7 @@ class GameViewController: UIViewController {
     /// Permite segiuir jugando o guarda el récord
     @IBAction func CheckResult(_ sender: Any) {
         if recient == options {
+            TextInfo.text = "Correct :)"
             points += 1
             startGame()
         } else {
