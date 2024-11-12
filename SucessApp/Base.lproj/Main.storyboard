@@ -21,7 +21,7 @@
                                 <rect key="frame" x="-367" y="-59" width="1126" height="945"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Sucess!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="dxf-et-nKE">
-                                <rect key="frame" x="76" y="12" width="240" height="172.33333333333334"/>
+                                <rect key="frame" x="76" y="12" width="240" height="189"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
@@ -29,8 +29,12 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dg4-fQ-ylL">
-                                <rect key="frame" x="156" y="368.33333333333331" width="86" height="38"/>
+                                <rect key="frame" x="156" y="385" width="86" height="38"/>
                                 <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="E3e-jY-gCV"/>
+                                    <constraint firstAttribute="width" constant="86" id="ME9-f8-VbQ"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Play &gt;" cornerStyle="medium">
                                     <fontDescription key="titleFontDescription" type="system" weight="black" pointSize="20"/>
@@ -40,40 +44,59 @@
                                     <segue destination="sCD-hv-Kuf" kind="presentation" modalPresentationStyle="fullScreen" id="ZuM-GM-vTB"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qb5-BK-eGM">
-                                <rect key="frame" x="140" y="591.33333333333337" width="112" height="54.666666666666629"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qb5-BK-eGM">
+                                <rect key="frame" x="140" y="608" width="112" height="46"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="112" id="HrM-X5-KPd"/>
+                                    <constraint firstAttribute="height" constant="46" id="t4H-V8-OKe"/>
+                                </constraints>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Scores &gt;" subtitle="Your best:" cornerStyle="medium">
+                                <buttonConfiguration key="configuration" style="plain" title="Scores &gt;" cornerStyle="medium" titleAlignment="center">
                                     <fontDescription key="titleFontDescription" type="system" weight="black" pointSize="20"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <segue destination="tOp-HX-B5E" kind="presentation" id="qpP-YJ-R17"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Your best:" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="11I-9y-MFL">
+                                <rect key="frame" x="140" y="631" width="112" height="20"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="112" id="0Kb-MH-3xr"/>
+                                    <constraint firstAttribute="height" constant="20" id="2bW-qX-ZuU"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dg4-fQ-ylL" secondAttribute="trailing" constant="151" id="AUI-iP-h4d"/>
-                            <constraint firstItem="dxf-et-nKE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="76" id="FCE-r2-GtD"/>
-                            <constraint firstItem="dxf-et-nKE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="MSy-Ok-Rid"/>
-                            <constraint firstItem="se8-as-90f" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-59" id="b3s-Uu-5hM"/>
-                            <constraint firstItem="dg4-fQ-ylL" firstAttribute="top" secondItem="dxf-et-nKE" secondAttribute="bottom" constant="184" id="gzG-97-Tqf"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="se8-as-90f" secondAttribute="trailing" constant="-382" id="iIa-xR-V77"/>
-                            <constraint firstItem="Qb5-BK-eGM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="140" id="ijp-8K-hWM"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Qb5-BK-eGM" secondAttribute="trailing" constant="141" id="jEa-IS-xgh"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="se8-as-90f" secondAttribute="bottom" constant="-34" id="oUB-AP-reM"/>
-                            <constraint firstItem="se8-as-90f" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-383" id="qsJ-oR-WJY"/>
-                            <constraint firstItem="Qb5-BK-eGM" firstAttribute="top" secondItem="dg4-fQ-ylL" secondAttribute="bottom" constant="185" id="sDY-c9-qcG"/>
-                            <constraint firstItem="dg4-fQ-ylL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="156" id="tBS-mi-XgE"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dxf-et-nKE" secondAttribute="trailing" constant="77" id="uUM-GK-MWu"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Qb5-BK-eGM" secondAttribute="bottom" constant="206" id="yuN-wV-Vs3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="11I-9y-MFL" secondAttribute="trailing" constant="141" id="1oZ-1N-gQA"/>
+                            <constraint firstItem="11I-9y-MFL" firstAttribute="top" secondItem="dg4-fQ-ylL" secondAttribute="bottom" constant="208" id="6DI-cX-W9V"/>
+                            <constraint firstItem="se8-as-90f" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-383" id="Eyg-sa-KGi"/>
+                            <constraint firstItem="dxf-et-nKE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="76" id="Tfo-bE-Nz3"/>
+                            <constraint firstItem="se8-as-90f" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-59" id="UNU-Vo-7MM"/>
+                            <constraint firstItem="Qb5-BK-eGM" firstAttribute="top" secondItem="dg4-fQ-ylL" secondAttribute="bottom" constant="185" id="XIn-RG-9g5"/>
+                            <constraint firstItem="11I-9y-MFL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="140" id="aAo-ln-bZr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="11I-9y-MFL" secondAttribute="bottom" constant="201" id="afX-2k-6s0"/>
+                            <constraint firstItem="dg4-fQ-ylL" firstAttribute="top" secondItem="dxf-et-nKE" secondAttribute="bottom" constant="184" id="d6r-uI-vcS"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="se8-as-90f" secondAttribute="bottom" constant="-34" id="dF0-d9-h5I"/>
+                            <constraint firstItem="dxf-et-nKE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="jJb-yz-vJN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dg4-fQ-ylL" secondAttribute="trailing" constant="151" id="mcS-0S-SfS"/>
+                            <constraint firstItem="Qb5-BK-eGM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="140" id="o5W-Sc-TPY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Qb5-BK-eGM" secondAttribute="trailing" constant="141" id="sFm-K8-V9E"/>
+                            <constraint firstItem="dg4-fQ-ylL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="156" id="syS-nV-Hzh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dxf-et-nKE" secondAttribute="trailing" constant="77" id="t4k-8Y-4C7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="se8-as-90f" secondAttribute="trailing" constant="-382" id="tdu-HF-rEO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Qb5-BK-eGM" secondAttribute="bottom" constant="198" id="yYx-G5-f7i"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="ScoreButton" destination="Qb5-BK-eGM" id="Oza-8T-1Cu"/>
+                        <outlet property="Info" destination="11I-9y-MFL" id="vnu-Na-z7L"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -96,7 +119,7 @@
                                 <rect key="frame" x="35" y="519" width="130" height="130"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v4j-OZ-CQw">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v4j-OZ-CQw">
                                 <rect key="frame" x="16" y="68" width="361" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -304,7 +327,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="qpP-YJ-R17"/>
+        <segue reference="Fwv-Dd-QH9"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="small_Pink_brown" width="50" height="50"/>
