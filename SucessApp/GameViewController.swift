@@ -18,6 +18,7 @@ class GameViewController: UIViewController {
     @IBOutlet weak var DeleteButton: UIButton!
     @IBOutlet var Options: [UIButton]?
     // Componentes del juego
+    @IBOutlet weak var ReLoadGame: UIButton!
     @IBOutlet weak var ImageSwitch: UIImageView!
     @IBOutlet weak var TextInfo: UITextView!
     @IBOutlet weak var ChooseButton: UIButton!
@@ -30,6 +31,7 @@ class GameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        ReLoadGame.isHidden = true
         startGame()
         ShowHUD(state: false)
     }
@@ -112,7 +114,7 @@ class GameViewController: UIViewController {
     /// Permite segiuir jugando o guarda el récord
     @IBAction func CheckResult(_ sender: Any) {
         if recient == options {
-            TextInfo.text = "Correct :)"
+            TextInfo.text = "Correct :) Score: \(points)"
             points += 1
             startGame()
         } else {
@@ -121,9 +123,12 @@ class GameViewController: UIViewController {
             if points > score {
                 Score.set(points, forKey: "score")
             }
-            ChooseButton.isHidden = true
+            ShowHUD(state: false)
+            ReLoadGame.isHidden = false
         }
     }
+    /// Reinicia el juego
+    @IBAction func ReLoad(_ sender: UIButton) {viewDidLoad()}
     private func startGame() {
         ImageSwitch.isHidden = false
         ShowHUD(state: false)

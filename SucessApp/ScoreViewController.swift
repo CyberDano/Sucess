@@ -7,11 +7,13 @@ class ScoreViewController: UIViewController {
     @IBOutlet weak var NickInput: UITextField!
     @IBOutlet weak var LastScore: UITextView!
     @IBOutlet weak var RankingTable: UITableView!
+    @IBOutlet weak var Information: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let score = UserDefaults.standard
         let points = score.integer(forKey: "score")
-        LastScore.text = "Your  best: \(points)"
+        LastScore.text = "Your best: \(points)"
         GetRanking()
     }
 
@@ -20,6 +22,9 @@ class ScoreViewController: UIViewController {
     
     /// Subir tu puntaje en API
     @IBAction func UploadScore(_ sender: Any) {
+        if nick.count > 0 {
+            
+        } else {Information.text = "You need a name to upload your score."}
     }
     
     /// Actualizar puntaje en API
@@ -32,6 +37,11 @@ class ScoreViewController: UIViewController {
     /// Obtener ranking en API
     func GetRanking() {
         let url = URL(string: "https://qhavrvkhlbmsljgmbknr.supabase.co/rest/v1/scores?select=*")
+        let token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFoYXZydmtobGJtc2xqZ21ia25yIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDA3MjY5MTgsImV4cCI6MjAxNjMwMjkxOH0.Ta-lXGGwSiUGh0VC8tAFcFQqsqAvB8vv XJjubeQkx8"
+        let request = NSMutableURLRequest(url: url!)
+        request.httpMethod = "GET"
+        request.setValue(token, forHTTPHeaderField: "apikey")
+        request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
         URLSession.shared.dataTask(with: url!) { (data, response, error) in
             if error == nil {
                 // Usar data

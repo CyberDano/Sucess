@@ -280,6 +280,19 @@
                                     <action selector="ChoosedOption:" destination="sCD-hv-Kuf" eventType="touchUpInside" id="5QK-Mv-8Ig"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SY2-9I-8T4">
+                                <rect key="frame" x="148" y="417" width="100" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Play again">
+                                    <fontDescription key="titleFontDescription" type="system" weight="black" pointSize="14"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="ReLoad:" destination="sCD-hv-Kuf" eventType="touchUpInside" id="bbJ-3q-RDn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="TEy-ja-7OZ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -289,6 +302,7 @@
                         <outlet property="ClearList" destination="ljw-uR-ApK" id="6Lw-ph-viT"/>
                         <outlet property="DeleteButton" destination="B7r-Fe-EDU" id="9Xf-fs-htE"/>
                         <outlet property="ImageSwitch" destination="Csa-QV-RFh" id="Dnx-HA-5p5"/>
+                        <outlet property="ReLoadGame" destination="SY2-9I-8T4" id="QOq-5X-YP8"/>
                         <outlet property="TextInfo" destination="v4j-OZ-CQw" id="MvT-0J-dja"/>
                         <outletCollection property="Options" destination="buz-Qa-H1j" collectionClass="NSMutableArray" id="ZsW-E2-Auj"/>
                         <outletCollection property="Options" destination="x5J-YG-FLk" collectionClass="NSMutableArray" id="y7I-Uq-Qy3"/>
@@ -317,8 +331,8 @@
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="ScoreTable" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="mU0-KX-tXV">
-                                <rect key="frame" x="34" y="215" width="330" height="570"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="34" y="215" width="330" height="515"/>
+                                <autoresizingMask key="autoresizingMask"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="sectionIndexColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -353,6 +367,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Sf-XU-EgA">
                                 <rect key="frame" x="34" y="144" width="130" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemGreenColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Upload score"/>
                                 <connections>
@@ -377,11 +392,20 @@
                                     <action selector="RankingWith_sender:" destination="tOp-HX-B5E" eventType="touchUpInside" id="H2y-5t-mHv"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L4t-7Z-1S3">
+                                <rect key="frame" x="174" y="69" width="190" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="AsC-2m-Mrl"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
+                        <outlet property="Information" destination="L4t-7Z-1S3" id="rB5-4e-lUp"/>
                         <outlet property="LastScore" destination="Tig-n8-m0X" id="Lb7-n7-7VD"/>
                         <outlet property="NickInput" destination="gnb-0p-Q01" id="0rj-PC-eJy"/>
                         <outlet property="RankingTable" destination="mU0-KX-tXV" id="esw-d2-iDQ"/>
@@ -414,6 +438,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPurpleColor">
             <color red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
