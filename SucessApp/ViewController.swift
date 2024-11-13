@@ -2,15 +2,15 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var Info: UITextView!
+    @IBOutlet weak var ScoreButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        LoadScore()
+        ScoreButton.configuration!.subtitle = "Your best: \(LoadScore())"
     }
-    private func LoadScore() {
+    private func LoadScore() -> Int{
         let score = UserDefaults.standard
-        let points = score.integer(forKey: "points")
-        Info.text = "Your best: \(points)"
+        let points = score.integer(forKey: "score")
+        return points
     }
 }
 

@@ -15,6 +15,7 @@ class GameViewController: UIViewController {
     ]
     // Botones de elección
     @IBOutlet weak var ClearList: UIButton!
+    @IBOutlet weak var DeleteButton: UIButton!
     @IBOutlet var Options: [UIButton]?
     // Componentes del juego
     @IBOutlet weak var ImageSwitch: UIImageView!
@@ -36,6 +37,7 @@ class GameViewController: UIViewController {
     private func ShowHUD(state: Bool) {
         ChooseButton.isHidden = !state
         ClearList.isHidden = !state
+        DeleteButton.isHidden = !state
         for n in Options! {
             n.isHidden = !state
         }
@@ -89,7 +91,10 @@ class GameViewController: UIViewController {
             n.isSelected = false
             n.backgroundColor = .gray
         }
-        if sender.tag == 8 && options.count > 0{
+        if sender.tag == 8 && options.count > 0 {
+            options.removeLast()
+            TextInfo.text = "Your sequence: \(options)"
+        } else if sender.tag == 9 && options.count > 0 {
             options.removeAll()
             TextInfo.text = "Your sequence: \(options)"
             for n in Options! {
@@ -98,7 +103,7 @@ class GameViewController: UIViewController {
             }
         }
         if !sender.isSelected {
-            if options.count <= 3 {options.append(sender.tag)}
+            if options.count < 3 {options.append(sender.tag)}
             sender.backgroundColor = .green
             TextInfo.text = "Your sequence: \(options)"
         }
@@ -112,9 +117,9 @@ class GameViewController: UIViewController {
             startGame()
         } else {
             TextInfo.text = "Oh no. You lose :(\nScore: \(points)"
-            let score = Score.integer(forKey: "points")
+            let score = Score.integer(forKey: "score")
             if points > score {
-                Score.set(points, forKey: "points")
+                Score.set(points, forKey: "score")
             }
             ChooseButton.isHidden = true
         }
