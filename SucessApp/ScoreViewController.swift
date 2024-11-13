@@ -17,23 +17,25 @@ class ScoreViewController: UIViewController {
 
     /// Guarda el nick del usuario
     @IBAction func ChangedNick(_ sender: UITextField) {if NickInput.text!.count <= 20  || NickInput.text != nil {nick = NickInput.text!}}
+    
     /// Subir tu puntaje en API
     @IBAction func UploadScore(_ sender: Any) {
     }
+    
     /// Actualizar puntaje en API
     @IBAction func UpdateScore(_ sender: Any) {
     }
+    
     /// Obtener ranking en API
     @IBAction func Ranking(_sender: UIButton) {GetRanking()}
+    
     /// Obtener ranking en API
     func GetRanking() {
         let url = URL(string: "https://qhavrvkhlbmsljgmbknr.supabase.co/rest/v1/scores?select=*")
         URLSession.shared.dataTask(with: url!) { (data, response, error) in
             if error == nil {
                 // Usar data
-            } else {
-                print(error!)
-            }
+            } else {print(error!)}
         }.resume()
     }
 }
