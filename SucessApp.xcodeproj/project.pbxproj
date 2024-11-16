@@ -18,6 +18,7 @@
 		7F7DB25D2CDB633400E7F2BF /* SucessAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7DB25C2CDB633400E7F2BF /* SucessAppTests.swift */; };
 		7F7DB2672CDB633400E7F2BF /* SucessAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7DB2662CDB633400E7F2BF /* SucessAppUITests.swift */; };
 		7F7DB2692CDB633400E7F2BF /* SucessAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7DB2682CDB633400E7F2BF /* SucessAppUITestsLaunchTests.swift */; };
+		FA3CECB42CE92ABB00C81FB3 /* ScoresClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3CECB32CE92ABB00C81FB3 /* ScoresClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		7F7DB2622CDB633400E7F2BF /* SucessAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SucessAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F7DB2662CDB633400E7F2BF /* SucessAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SucessAppUITests.swift; sourceTree = "<group>"; };
 		7F7DB2682CDB633400E7F2BF /* SucessAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SucessAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FA3CECB32CE92ABB00C81FB3 /* ScoresClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoresClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				7F7DB2472CDB633100E7F2BF /* SceneDelegate.swift */,
 				7F7DB2492CDB633100E7F2BF /* ViewController.swift */,
 				7F7DB24B2CDB633200E7F2BF /* Main.storyboard */,
+				FA3CECB32CE92ABB00C81FB3 /* ScoresClass.swift */,
 				7F7DB24E2CDB633400E7F2BF /* Assets.xcassets */,
 				7F7DB2502CDB633400E7F2BF /* LaunchScreen.storyboard */,
 				7F7DB2532CDB633400E7F2BF /* Info.plist */,
@@ -267,6 +270,7 @@
 				7F7DB24A2CDB633100E7F2BF /* ViewController.swift in Sources */,
 				7F7DB2462CDB633100E7F2BF /* AppDelegate.swift in Sources */,
 				7F0D66802CE4970900F1E82F /* ScoreViewController.swift in Sources */,
+				FA3CECB42CE92ABB00C81FB3 /* ScoresClass.swift in Sources */,
 				7F2BDCA12CDB6B16001625ED /* GameViewController.swift in Sources */,
 				7F7DB2482CDB633100E7F2BF /* SceneDelegate.swift in Sources */,
 			);
